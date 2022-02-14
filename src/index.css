@@ -1,13 +1,105 @@
-body {
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: montserrat, arial, verdana;
+}
+#root {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+
+.roman-numeral {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+}
+.roman-numeral__definitions {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 20px 10px;
+}
+.roman-numeral__definitions__definition {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.roman-numeral__convert-form__input {
+  text-transform: uppercase;
+  padding: 15px;
+  border: 1px solid rgba(204, 204, 204, 1);
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: rgba(44, 62, 80, 1);
+  font-size: 13px;
+}
+.roman-numeral__convert-form__input:focus-visible {
+  outline: rgba(0, 89, 182, 1) auto 1px;
+}
+
+.roman-numeral__convert-form__error {
+  color: rgba(173, 31, 21, 1);
+  font-size: 0.75rem;
+}
+
+.roman-numeral__convert-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.roman-numeral__convert-form__actions .button {
+  width: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+.roman-numeral__convert-form__actions__submit {
+  background: rgba(39, 174, 96, 1);
+}
+.roman-numeral__convert-form__actions__submit:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(39, 174, 96, 1);
+}
+
+.roman-numeral__convert-form__actions__submit:disabled {
+  background: rgba(39, 174, 96, 0.5);
+}
+.roman-numeral__convert-form__actions__submit:disabled:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(39, 174, 96, 0.5);
+  cursor: initial;
+}
+
+.roman-numeral__convert-form__actions__reset {
+  background: rgba(196, 102, 0, 1);
+}
+.roman-numeral__convert-form__actions__reset:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(196, 102, 0, 1);
+}
+
+.roman-numeral__result {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: rgba(44, 62, 80, 1);
+  margin-bottom: 10px;
 }
